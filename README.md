@@ -16,7 +16,7 @@
       <img src="https://smithery.ai/badge/@dev-ko1g/rchilli" alt="Smithery Badge" />
     </a>
     &nbsp;
-    <img src="https://img.shields.io/badge/MCP%20Spec-2025--03--26-teal" alt="MCP Spec" />
+    <img src="https://img.shields.io/badge/MCP%20Spec-2025--06--05-teal" alt="MCP Spec" />
     &nbsp;
     <img src="https://img.shields.io/badge/Tools-17-green" alt="17 Tools" />
     &nbsp;
