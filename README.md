@@ -110,17 +110,6 @@ on first connect.
 
 ---
 
-## Built-in Resources (4)
-
-| Resource | Purpose |
-|----------|---------|
-| `rchilli://supported-file-types` | List of accepted file formats per tool category |
-| `rchilli://field-reference/resume` | Reference guide for resume parser output fields |
-| `rchilli://field-reference/jd` | Reference guide for JD parser output fields |
-| `rchilli://index-types` | Valid values for search index type and document type |
-
----
-
 ## Response Format
 
 Every tool returns a consistent envelope:
