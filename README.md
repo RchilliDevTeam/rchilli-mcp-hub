@@ -149,7 +149,7 @@ Add to your `claude_desktop_config.json`:
 Set transport to **Streamable HTTP**, URL to `https://mcp.rchilli.ai/mcp`.
 The OAuth popup opens on first connect and credentials are stored for reuse.
 
-###🔌 Other MCP Clients
+### 🔌 Other MCP Clients   ← H3
 Any MCP client that supports Streamable HTTP transport can connect
 to RChilli MCP Hub using the production endpoint directly.
 Smithery
