@@ -35,8 +35,8 @@ please report it responsibly.
 
 ### Infrastructure
 - Hosted on GCP — ISO 27001 compliant infrastructure
-- DNS rebinding protection enabled
-- Rate limiting applied per client key
+
+
 
 ---
 
