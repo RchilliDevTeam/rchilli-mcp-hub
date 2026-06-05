@@ -106,18 +106,6 @@ Your AI Client               MCP Server               RChilli Auth
 - Access tokens refresh every **1 hour** silently
 - Sessions stay active for **30 days** via refresh token
 
-### Server-to-server (client_credentials)
-
-```http
-POST /token
-Content-Type: application/x-www-form-urlencoded
-
-grant_type=client_credentials&client_id=YOUR_ID&client_secret=YOUR_SECRET
-```
-
-Returns a Bearer token directly — no browser or user interaction needed.
-
----
 
 ## Quick Connect
 
