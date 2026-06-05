@@ -20,7 +20,7 @@ All notable changes to RChilli MCP Hub are documented here.
   `find_matches_in_index`, `search_indexed_documents`
 - OAuth 2.1 Authorization Code + PKCE (S256) authentication
 - OAuth 2.0 client_credentials for server-to-server integrations
-- Streamable HTTP transport — MCP Spec 2025-06-05
+- Streamable HTTP transport — MCP Spec 2025-11-26
 - Auto-injection of `userkey` and `subuserid` from Bearer token
 - Consistent `{ success, data, meta }` response envelope
 - Listed on Smithery at smithery.ai/servers/dev-ko1g/rchilli
