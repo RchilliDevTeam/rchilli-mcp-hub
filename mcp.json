@@ -1,0 +1,93 @@
+{
+  "name": "rchilli-mcp-hub",
+  "version": "1.0.0",
+  "description": "RChilli HR Intelligence MCP — parse resumes and job descriptions, match candidates, enrich skills with ONet/ESCO taxonomy, redact bias fields, and convert documents through any MCP-enabled AI assistant.",
+  "endpoint": "https://mcp.rchilli.ai/mcp",
+  "transport": "streamable-http",
+  "mcpSpec": "2025-03-26",
+  "auth": {
+    "type": "oauth2",
+    "grant_types": ["authorization_code", "client_credentials"],
+    "pkce": true,
+    "discovery": "https://mcp.rchilli.ai/.well-known/oauth-authorization-server"
+  },
+  "tools_count": 17,
+  "categories": ["HR Technology", "AI & Machine Learning", "Productivity"],
+  "tools": [
+    {
+      "name": "parse_resume",
+      "description": "Extracts 200+ normalized fields from resume text"
+    },
+    {
+      "name": "parse_resume_from_url",
+      "description": "Parses a resume from a public URL"
+    },
+    {
+      "name": "parse_job_description",
+      "description": "Parses a job description into structured role data"
+    },
+    {
+      "name": "lookup_skill",
+      "description": "Returns authoritative detail for any skill from ONet/ESCO taxonomy"
+    },
+    {
+      "name": "lookup_job_profile",
+      "description": "Returns canonical detail for any job profile or title"
+    },
+    {
+      "name": "autocomplete_skill",
+      "description": "Returns skill name suggestions for a partial keyword"
+    },
+    {
+      "name": "autocomplete_job_profile",
+      "description": "Returns job profile suggestions for a partial keyword"
+    },
+    {
+      "name": "redact_resume",
+      "description": "Removes bias and PII fields from a resume"
+    },
+    {
+      "name": "reformat_resume_with_template",
+      "description": "Restyles a resume into a branded template"
+    },
+    {
+      "name": "convert_document_format",
+      "description": "Converts a resume document between formats"
+    },
+    {
+      "name": "extract_named_entities",
+      "description": "Tags named entities from any HR text"
+    },
+    {
+      "name": "extract_contact_info",
+      "description": "Extracts contact details from unstructured text"
+    },
+    {
+      "name": "geocode_locations",
+      "description": "Resolves latitude and longitude for locations"
+    },
+    {
+      "name": "determine_job_zone",
+      "description": "Determines O*NET Job Zone level for a resume or JD"
+    },
+    {
+      "name": "score_resume_against_jd",
+      "description": "Produces an explainable fit score between a resume and a JD"
+    },
+    {
+      "name": "find_matches_in_index",
+      "description": "Ranks an indexed talent pool against a source document"
+    },
+    {
+      "name": "search_indexed_documents",
+      "description": "Keyword search across indexed resumes or JDs"
+    }
+  ],
+  "links": {
+    "homepage": "https://mcp.rchilli.ai",
+    "documentation": "https://docs.rchilli.com/kc/index.html",
+    "signup": "https://myaccount.rchilli.com/account/login",
+    "support": "https://help.rchilli.com/hc/en-us",
+    "smithery": "https://smithery.ai/servers/dev-ko1g/rchilli"
+  }
+}
