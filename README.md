@@ -26,7 +26,7 @@
   </p>
 
   <p>
-    <strong>Production Endpoint:</strong>
+    <strong>MCP Endpoint:</strong>
     <code>https://mcp.rchilli.ai/mcp</code>
   </p>
 </div>
