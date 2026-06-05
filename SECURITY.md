@@ -40,13 +40,6 @@ please report it responsibly.
 
 ---
 
-## Supported Versions
-
-| Version | Supported |
-|---------|-----------|
-| 1.x     | ✅ Yes    |
-
----
 
 ## Contact
 
