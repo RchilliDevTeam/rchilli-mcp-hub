@@ -1,0 +1,21 @@
+Copyright (c) 2026 RChilli. All Rights Reserved.
+
+This repository contains interface definitions, documentation,
+and connection metadata for the RChilli MCP Hub service only.
+
+The underlying service implementation, source code, algorithms,
+prompt templates, API routing logic, and database schemas are
+proprietary and confidential to RChilli.
+
+You may:
+- Use the connection information in this repository to integrate
+  with RChilli MCP Hub as an authorized client
+- Reference this repository to understand what tools are available
+
+You may not:
+- Copy, reproduce, or reuse any part of this repository to build
+  a competing product or service
+- Reverse-engineer the RChilli MCP Hub service from this repository
+- Redistribute this repository or any portion of it commercially
+
+For licensing enquiries contact: legal@rchilli.com
