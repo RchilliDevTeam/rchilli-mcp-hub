@@ -149,12 +149,18 @@ Add to your `claude_desktop_config.json`:
 Set transport to **Streamable HTTP**, URL to `https://mcp.rchilli.ai/mcp`.
 The OAuth popup opens on first connect and credentials are stored for reuse.
 
-### 🔌 Other MCP Clients   ← H3
+### 🔌 Other MCP Clients
+
 Any MCP client that supports Streamable HTTP transport can connect
 to RChilli MCP Hub using the production endpoint directly.
-Smithery
-bashnpm install -g smithery
+
+#### Smithery
+
+```bash
+npm install -g smithery
 smithery mcp add dev-ko1g/rchilli
+```
+
 Or browse the listing at:
 https://smithery.ai/servers/dev-ko1g/rchilli
 
