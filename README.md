@@ -150,4 +150,4 @@ RChilli MCP Hub requires a valid RChilli account with an active plan.
 - **Documentation:**      https://docs.rchilli.com/kc/index.html
 - **Help Desk:**          https://help.rchilli.com/hc/en-us
 - **Support Email:**      support@rchilli.com
-- **Phone:**              +1-877-572-7737
+
