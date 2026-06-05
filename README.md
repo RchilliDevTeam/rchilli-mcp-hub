@@ -151,9 +151,6 @@ The OAuth popup opens on first connect and credentials are stored for reuse.
 
 ### 🔌 Other MCP Clients
 
-Any MCP client that supports Streamable HTTP transport can connect
-to RChilli MCP Hub using the production endpoint directly.
-
 #### Smithery
 
 ```bash
