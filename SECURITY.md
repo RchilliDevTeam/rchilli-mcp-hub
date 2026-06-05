@@ -50,6 +50,5 @@ please report it responsibly.
 
 ## Contact
 
-- **Security issues:** security@rchilli.com  
-- **General support:** support@rchilli.com  
+- **Security issues:** support@rchilli.com    
 - **Help desk:** https://help.rchilli.com/hc/en-us
