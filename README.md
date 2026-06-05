@@ -45,7 +45,7 @@ JSON response — no raw exceptions, no inconsistent formats.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 1. **Zero boilerplate** — One endpoint, one OAuth login, 17 tools ready to use
 2. **OAuth 2.1 + PKCE** — No API keys to copy or paste; fully automatic auth flow
@@ -59,7 +59,7 @@ JSON response — no raw exceptions, no inconsistent formats.
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
 1. **Resume screening** — Parse and structure resumes for AI-powered shortlisting
 2. **Job description analysis** — Extract required skills, experience range, and qualifications from any JD
@@ -72,7 +72,7 @@ JSON response — no raw exceptions, no inconsistent formats.
 
 ---
 
-## 🔐 Authentication
+## Authentication
 
 RChilli MCP Hub uses **OAuth 2.1 Authorization Code + PKCE (S256)** for
 interactive clients and **OAuth 2.0 client_credentials** for server-to-server
@@ -119,7 +119,7 @@ Returns a Bearer token directly — no browser or user interaction needed.
 
 ---
 
-## ⚡ Quick Connect
+## Quick Connect
 
 ### Claude Desktop
 
@@ -149,7 +149,7 @@ Add to your `claude_desktop_config.json`:
 Set transport to **Streamable HTTP**, URL to `https://mcp.rchilli.ai/mcp`.
 The OAuth popup opens on first connect and credentials are stored for reuse.
 
-### 🔌 Other MCP Clients
+### Other MCP Clients
 
 #### Smithery
 
@@ -163,13 +163,13 @@ https://smithery.ai/servers/dev-ko1g/rchilli
 
 ---
 
-## 🛠️ Tools — 17 Total
+## Tools — 17 Total
 
 `userkey` and `subuserid` are injected automatically from your Bearer token — you never need to pass them manually.
 
 ---
 
-### 📄 Resume & Job Description Parsing (3 tools)
+### Resume & Job Description Parsing (3 tools)
 
 | Tool | What It Does |
 |------|-------------|
@@ -179,7 +179,7 @@ https://smithery.ai/servers/dev-ko1g/rchilli
 
 ---
 
-### 🔍 Skills & Job Taxonomy (4 tools)
+### Skills & Job Taxonomy (4 tools)
 
 | Tool | What It Does |
 |------|-------------|
@@ -190,7 +190,7 @@ https://smithery.ai/servers/dev-ko1g/rchilli
 
 ---
 
-### 🧹 Redaction, Documents & Utilities (7 tools)
+### Redaction, Documents & Utilities (7 tools)
 
 | Tool | What It Does |
 |------|-------------|
@@ -204,7 +204,7 @@ https://smithery.ai/servers/dev-ko1g/rchilli
 
 ---
 
-### 🔎 Search & Matching (3 tools)
+### Search & Matching (3 tools)
 
 | Tool | What It Does |
 |------|-------------|
@@ -214,7 +214,7 @@ https://smithery.ai/servers/dev-ko1g/rchilli
 
 ---
 
-## 📦 Response Format
+## Response Format
 
 Every tool returns the same consistent envelope:
 
@@ -251,14 +251,14 @@ agent can automatically retry without human intervention.
 
 ---
 
-## 🚀 Coming Soon
+## Coming Soon
 
 AI Agent tools — **Interview Question Generator**, **JD Generator**,
 **Skill-Gap Analysis**, **Bias Detection**, and **Learning Path**.
 
 ---
 
-## 🔑 Get Access
+## Get Access
 
 RChilli MCP Hub requires a valid RChilli account with an active plan.
 
