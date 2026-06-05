@@ -143,8 +143,11 @@ Errors follow the same structure with `success: false` and an
 
 ## Get Access
 
-RChilli MCP Hub requires a valid RChilli account.
+RChilli MCP Hub requires a valid RChilli account with an active plan.
 
-- **Get credentials:** https://rchilli.com/pricing  
-- **Documentation:** https://rchilli.com/docs  
-- **Support:** support@rchilli.com
+- **Sign up / Login:**    https://myaccount.rchilli.com/account/login
+- **Plans & Pricing:**    https://docs.rchilli.com/kc/Plan_Subscription_and_cost
+- **Documentation:**      https://docs.rchilli.com/kc/index.html
+- **Help Desk:**          https://help.rchilli.com/hc/en-us
+- **Support Email:**      support@rchilli.com
+- **Phone:**              +1-877-572-7737
