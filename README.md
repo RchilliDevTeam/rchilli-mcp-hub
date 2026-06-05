@@ -49,7 +49,6 @@ Your AI Client               MCP Server              RChilli Auth
 ```
 
 **What this means for you:**
-- Enter your **RChilli Client ID** and **Client Secret** once
 - The full OAuth flow opens automatically — no tokens to copy or paste
 - Access tokens refresh automatically every hour
 - Sessions stay active for 30 days via refresh token
