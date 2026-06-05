@@ -7,7 +7,7 @@ please report it responsibly.
 
 **Do not** open a public GitHub issue for security vulnerabilities.
 
-**Email:** security@rchilli.com  
+**Email:** support@rchilli.com  
 **Response time:** Within 48 hours  
 **Disclosure policy:** Coordinated disclosure after fix is deployed
 
