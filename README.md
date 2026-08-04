@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./rchilli-logo.png" alt="RChilli Logo" width="280" />
+  <img src="https://raw.githubusercontent.com/RchilliDevTeam/rchilli-mcp-hub/main/rchilli-logo.png" alt="RChilli Logo" width="280" />
 
   <h1>RChilli MCP Hub</h1>
 
@@ -12,17 +12,10 @@
   </p>
 
   <p>
-    <a href="https://smithery.ai/servers/dev-ko1g/rchilli">
-      <img src="https://smithery.ai/badge/@dev-ko1g/rchilli" alt="Smithery Badge" />
-    </a>
-    &nbsp;
-    <img src="https://img.shields.io/badge/MCP%20Spec-2025--11--26-teal" alt="MCP Spec" />
-    &nbsp;
-    <img src="https://img.shields.io/badge/Tools-17-green" alt="17 Tools" />
-    &nbsp;
-    <img src="https://img.shields.io/badge/Auth-OAuth%202.1-blue" alt="OAuth 2.1" />
-    &nbsp;
-    <img src="https://img.shields.io/badge/Transport-Streamable%20HTTP-orange" alt="Transport" />
+    MCP Spec: 2025-11-26 &nbsp;|&nbsp;
+    17 Tools &nbsp;|&nbsp;
+    OAuth 2.1 &nbsp;|&nbsp;
+    Streamable HTTP
   </p>
 
   <p>
@@ -40,12 +33,12 @@ HR data intelligence platform as **17 AI-callable tools** across 4 categories.
 
 Built on **15+ years of HR data intelligence**, it is trusted by ATS vendors,
 HR technology platforms, staffing agencies, and enterprise recruiting teams
-worldwide. Every tool is **read-only** and returns a consistent, structured
-JSON response — no raw exceptions, no inconsistent formats.
+worldwide. Every tool returns a consistent, structured JSON response — no raw
+exceptions, no inconsistent formats.
 
 ---
 
-##  Key Features
+## ✨ Key Features
 
 1. **Zero boilerplate** — One endpoint, one OAuth login, 17 tools ready to use
 2. **OAuth 2.1 + PKCE** — No API keys to copy or paste; fully automatic auth flow
@@ -59,12 +52,12 @@ JSON response — no raw exceptions, no inconsistent formats.
 
 ---
 
-## Use Cases
+## 🎯 Use Cases
 
 1. **Resume screening** — Parse and structure resumes for AI-powered shortlisting
 2. **Job description analysis** — Extract required skills, experience range, and qualifications from any JD
 3. **Candidate-to-job matching** — One-to-one fit scoring with field-level evidence, no indexing required
-4. **Talent pool search** — Keyword search across your indexed resume database
+4. **Talent pool search** — Keyword and semantic search across your indexed resume database
 5. **Skill gap analysis** — Identify what a candidate is missing for a specific role
 6. **Bias-free hiring** — Redact names, photos, gender, and age before sharing with hiring managers
 7. **Taxonomy enrichment** — Look up and autocomplete 10,000+ standardized skills and job titles
@@ -72,7 +65,7 @@ JSON response — no raw exceptions, no inconsistent formats.
 
 ---
 
-## Authentication
+## 🔐 Authentication
 
 RChilli MCP Hub uses **OAuth 2.1 Authorization Code + PKCE (S256)** for
 interactive clients and **OAuth 2.0 client_credentials** for server-to-server
@@ -106,8 +99,18 @@ Your AI Client               MCP Server               RChilli Auth
 - Access tokens refresh every **1 hour** silently
 - Sessions stay active for **30 days** via refresh token
 
+### Server-to-server (client_credentials)
 
-## Quick Connect
+```http
+POST /token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&client_id=YOUR_ID&client_secret=YOUR_SECRET
+```
+
+---
+
+## ⚡ Quick Connect
 
 ### Claude Desktop
 
@@ -137,7 +140,10 @@ Add to your `claude_desktop_config.json`:
 Set transport to **Streamable HTTP**, URL to `https://mcp.rchilli.ai/mcp`.
 The OAuth popup opens on first connect and credentials are stored for reuse.
 
-### Other MCP Clients
+### 🔌 Other MCP Clients
+
+Any MCP client that supports **Streamable HTTP** transport can connect
+to RChilli MCP Hub using the production endpoint directly.
 
 #### Smithery
 
@@ -147,62 +153,62 @@ smithery mcp add dev-ko1g/rchilli
 ```
 
 Or browse the listing at:
-https://smithery.ai/servers/dev-ko1g/rchilli
+[https://smithery.ai/servers/dev-ko1g/rchilli](https://smithery.ai/servers/dev-ko1g/rchilli)
 
 ---
 
-## Tools — 17 Total
+## 🛠️ Tools — 17 Total
 
 `userkey` and `subuserid` are injected automatically from your Bearer token — you never need to pass them manually.
 
 ---
 
-### Resume & Job Description Parsing (3 tools)
+### 📄 Resume & Job Description Parsing (3 tools)
 
 | Tool | What It Does |
 |------|-------------|
-| `parse_resume` | Extracts 200+ normalized fields — name, contact, skills, work history, education, certifications, and taxonomy-enriched job profile — from resume text. Use for plain text resumes. |
-| `parse_resume_from_url` | Same deep extraction as `parse_resume` but fetches the file from a public URL. Supports PDF, DOCX, RTF, and 15+ formats. Use when the resume lives in cloud storage or an ATS link. |
-| `parse_job_description` | Parses a job description into structured data — required and preferred skills, experience range, salary, qualifications, and taxonomy mappings. Use for job description text or files. |
+| `extract_resume_data` | Extracts and converts resumes, CVs, and candidate documents into structured, searchable profiles with contact details, skills, experience, education, certifications, and taxonomy-enriched data. Supports 40+ languages, batch mode, and resume reprocessing. Auto-fills ATS fields in under 10 seconds — documented to increase candidate conversion by up to 194%. |
+| `extract_resume_data_from_url` | Accepts a direct URL to a PDF, DOCX, or RTF file and returns the same normalized JSON profile as the Resume Data Extraction tool. Ideal for pipeline automation where resumes are stored in cloud storage, S3, or email attachments. |
+| `extract_job_data` | Extracts and converts job descriptions into structured hiring data including job title, required skills, preferred skills, responsibilities, experience, education, and taxonomy-normalized role requirements for recruitment automation and candidate matching. |
 
 ---
 
-### Skills & Job Taxonomy (4 tools)
+### 🔍 Skills & Job Taxonomy (4 tools)
 
 | Tool | What It Does |
 |------|-------------|
-| `lookup_skill` | Returns authoritative detail for any skill — definition, aliases, related skills, ontology, and ONet/ESCO codes. Grounds skill reasoning in a standardized taxonomy. |
-| `lookup_job_profile` | Returns canonical detail for a role — required skills, career level, ontology, and ONet/ESCO mappings. Answers "what does this role need" from real taxonomy data. |
-| `autocomplete_skill` | Returns skill name suggestions for a partial keyword across 10,000+ curated skills. Keeps free-text inputs aligned to the canonical taxonomy. |
-| `autocomplete_job_profile` | Returns job profile suggestions for a partial keyword across 10,000+ curated job titles. Powers fast disambiguation and input alignment. |
+| `lookup_skill` | Returns authoritative detail for a known skill including description, all aliases, related skills, proficiency levels, and O\*NET/ESCO mappings. Use when you need the complete record rather than a ranked search. |
+| `lookup_job_profile` | Returns authoritative detail for a known job profile including canonical title, SOC/O\*NET code, job family, typical required and preferred skills, salary bands, and work context. |
+| `autocomplete_skill` | Accepts a partial skill string (min 2 chars) and returns up to 10 ranked autocomplete suggestions with canonical names and categories. Prevents free-text entry errors and keeps skill data clean at point of entry. |
+| `autocomplete_job_profile` | Accepts a partial job title string and returns ranked autocomplete suggestions with canonical titles and job families. Ensures job titles map to taxonomy profiles from the moment a recruiter starts typing. |
 
 ---
 
-### Redaction, Documents & Utilities (7 tools)
+### 🧹 Redaction, Documents & Utilities (7 tools)
 
 | Tool | What It Does |
 |------|-------------|
-| `redact_resume` | Masks or removes bias and PII fields — name, photo, age, gender, contact — producing a blind version for sharing with hiring managers. Field selection is configurable. |
-| `reformat_resume_with_template` | Restyles any resume into a branded template (TM001–TM006) and outputs PDF, DOCX, RTF, or HTML. Standardizes candidate presentation. |
-| `convert_document_format` | Converts a resume document between formats — DOCX to PDF, RTF to HTML, and more — with optional face-image detection. |
-| `extract_named_entities` | Tags named entities — job titles, skills, cities, degrees, organizations — with their positions from any free text. |
-| `extract_contact_info` | Pulls contact details — name, email, phone, address, city, state, country, website — from unstructured text. |
-| `geocode_locations` | Resolves latitude and longitude for one or more locations, or for locations inside parser output. Enables distance and radius logic. |
-| `determine_job_zone` | Determines the O*NET Job Zone level (1–5) for a resume or JD. Useful for leveling candidates and gauging role seniority. |
+| `redact_resume` | Redacts personally identifiable information from candidate profiles to support anonymized review, bias-aware screening, compliance workflows, and audit logs. Configurable redaction scope. Idempotent. |
+| `reformat_resume_with_template` | Accepts any structured candidate profile and applies one of six branded templates (TM001–TM006) to produce a consistently formatted output document in PDF, DOCX, RTF, or HTML. Eliminates manual reformatting and enforces brand consistency at scale. |
+| `convert_document_format` | Accepts a document as base64 or URL and converts between PDF, DOCX, RTF, HTML, and plain text. Preserves formatting fidelity. Useful as a pre-processing step before data extraction on non-standard file types. |
+| `tag_entities` | Takes already-extracted HR text and annotates it by wrapping each recognized entity in a structured XML-style label inline — covering 10+ HR-specific entity types including job title, skill, city, degree, organization, person name, state, country, date, and year. |
+| `extract_contacts` | Identifies and structures names, emails, phone numbers, LinkedIn URLs, and addresses with field-level confidence scores from candidate records, emails, or documents. Safe for GDPR/CCPA workflows. |
+| `geolocate` | Converts partial or informal location text into structured city, state, country, ISO codes, latitude, and longitude. Enables radius-based candidate and job search and supports workforce planning analytics. |
+| `classify_job_zone` | Reads the job profile from a resume or job description and returns its O\*NET Job Zone (1–5) based on education, experience, and training criteria. Enables candidate-to-role fit filtering, compensation benchmarking, and over/under-qualification flagging. |
 
 ---
 
-### Search & Matching (3 tools)
+### 🔎 Search & Matching (3 tools)
 
 | Tool | What It Does |
 |------|-------------|
-| `score_resume_against_jd` | Produces an explainable one-to-one fit score between a resume and a JD with field-level evidence. No prior indexing required. |
-| `find_matches_in_index` | Ranks an indexed corpus of resumes or JDs against a source document. Returns the best matches with scores for your talent pool. |
-| `search_indexed_documents` | Runs a keyword search across your indexed resumes or JDs. Find candidates or roles by skill, title, or term. |
+| `score_resume_against_jd` | Accepts one resume and one Job Description (no index required) and returns an overall match score, dimension scores, skill gap list, and natural-language explanation. Bias-controlled and audit-ready. |
+| `find_matches_in_index` | Accepts a resume or Job Description as input and returns the top-N most similar documents from the indexed corpus ranked by semantic similarity. No index setup required for the input document. |
+| `search_indexed_documents` | Accepts a query string and returns ranked document references from the tenant's pre-populated index. Supports Boolean and semantic search modes. Requires documents to be indexed before use. |
 
 ---
 
-## Response Format
+## 📦 Response Format
 
 Every tool returns the same consistent envelope:
 
@@ -239,14 +245,49 @@ agent can automatically retry without human intervention.
 
 ---
 
-## Coming Soon
+## Frequently Asked Questions
+
+**What AI clients work with RChilli MCP Hub?**
+Any MCP-enabled client — Claude Desktop, Claude.ai, Cursor, Cline,
+Windsurf, Zed, and VS Code. Any client supporting Streamable HTTP works.
+
+**Do I need an API key?**
+No API key required. RChilli MCP Hub uses OAuth 2.1. Enter your RChilli
+Client ID and Secret once — the full login flow opens automatically.
+
+**How do I get RChilli credentials?**
+Sign up or log in at https://myaccount.rchilli.com/account/login and
+get your Client ID and Secret from the dashboard.
+
+**What file formats are supported for resume parsing?**
+PDF, DOCX, DOC, RTF, HTML, and 15+ additional formats across 40+ languages.
+
+**Is my resume data stored by the MCP server?**
+No. The MCP layer does not store any resume or candidate data. All data
+in transit is encrypted via TLS 1.3.
+
+**Can I use this for server-to-server integrations?**
+Yes. OAuth 2.0 client_credentials grant is supported for automated
+pipelines — no browser login needed.
+
+**What happens if a tool call fails?**
+All errors return a structured JSON envelope with a code, message, and
+retryable flag. Retryable is true for rate-limit and transient errors.
+
+**Does it support batch processing?**
+Yes. `extract_resume_data` supports batch mode to process legacy databases
+or migration backlogs overnight at scale.
+
+---
+
+## 🚀 Coming Soon
 
 AI Agent tools — **Interview Question Generator**, **JD Generator**,
 **Skill-Gap Analysis**, **Bias Detection**, and **Learning Path**.
 
 ---
 
-## Get Access
+## 🔑 Get Access
 
 RChilli MCP Hub requires a valid RChilli account with an active plan.
 
@@ -258,7 +299,6 @@ RChilli MCP Hub requires a valid RChilli account with an active plan.
 | Help Desk | https://help.rchilli.com/hc/en-us |
 | Smithery Listing | https://smithery.ai/servers/dev-ko1g/rchilli |
 | Support | support@rchilli.com |
-
 
 ---
 
