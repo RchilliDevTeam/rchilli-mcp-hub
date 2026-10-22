@@ -15,15 +15,15 @@
   "categories": ["HR Technology", "AI & Machine Learning", "Productivity"],
   "tools": [
     {
-      "name": "parse_resume",
+      "name": "extract_resume_data",
       "description": "Extracts 200+ normalized fields from resume text"
     },
     {
-      "name": "parse_resume_from_url",
+      "name": "extract_resume_data_from_url",
       "description": "Parses a resume from a public URL"
     },
     {
-      "name": "parse_job_description",
+      "name": "extract_job_data",
       "description": "Parses a job description into structured role data"
     },
     {
@@ -55,19 +55,19 @@
       "description": "Converts a resume document between formats"
     },
     {
-      "name": "extract_named_entities",
+      "name": "tag_entities",
       "description": "Tags named entities from any HR text"
     },
     {
-      "name": "extract_contact_info",
+      "name": "extract_contacts",
       "description": "Extracts contact details from unstructured text"
     },
     {
-      "name": "geocode_locations",
+      "name": "geolocate",
       "description": "Resolves latitude and longitude for locations"
     },
     {
-      "name": "determine_job_zone",
+      "name": "classify_job_zone",
       "description": "Determines O*NET Job Zone level for a resume or JD"
     },
     {
@@ -142,8 +142,7 @@
       "name": "analyze_skill_adjacency",
       "description": "Query RChilli's skill adjacency graph to find related skills, identify candidate skill gaps, check near-fit candidates against a role, and recommend learning paths — all from a single talent intelligence engine."
     }
-  ]
-}
+  ],
   "links": {
     "homepage": "https://mcp.rchilli.ai",
     "documentation": "https://docs.rchilli.com/kc/index.html",
