@@ -13,7 +13,7 @@
 
   <p>
     MCP Spec: 2025-11-26 &nbsp;|&nbsp;
-    17 Tools &nbsp;|&nbsp;
+    37 Tools &nbsp;|&nbsp;
     OAuth 2.1 &nbsp;|&nbsp;
     Streamable HTTP
   </p>
@@ -29,7 +29,7 @@
 ## What is RChilli MCP Hub?
 
 RChilli MCP Hub is a production-grade MCP server that exposes RChilli's full
-HR data intelligence platform as **17 AI-callable tools** across 4 categories.
+HR data intelligence platform as **37 AI-callable tools** across 4 categories.
 
 Built on **15+ years of HR data intelligence**, it is trusted by ATS vendors,
 HR technology platforms, staffing agencies, and enterprise recruiting teams
@@ -40,7 +40,7 @@ exceptions, no inconsistent formats.
 
 ## ✨ Key Features
 
-1. **Zero boilerplate** — One endpoint, one OAuth login, 17 tools ready to use
+1. **Zero boilerplate** — One endpoint, one OAuth login, 37 tools ready to use
 2. **OAuth 2.1 + PKCE** — No API keys to copy or paste; fully automatic auth flow
 3. **200+ resume fields** — Name, contact, skills, experience, education, certifications, and taxonomy-enriched job profiles
 4. **ONet / ESCO taxonomy** — 10,000+ curated skills and job profiles with canonical mappings
@@ -157,7 +157,7 @@ Or browse the listing at:
 
 ---
 
-## 🛠️ Tools — 17 Total
+## 🛠️ Tools — 37 Total
 
 `userkey` and `subuserid` are injected automatically from your Bearer token — you never need to pass them manually.
 
@@ -207,6 +207,31 @@ Or browse the listing at:
 | `search_indexed_documents` | Accepts a query string and returns ranked document references from the tenant's pre-populated index. Supports Boolean and semantic search modes. Requires documents to be indexed before use. |
 
 ---
+
+### 🤖 AI Agents (20 tools)
+
+| Tool | Agent | What It Does |
+|------|-------|--------------|
+| `analyze_hr_call` | HR Call Analyzer Agent | Analyze recruiting calls for insights, sentiment, and action items. |
+| `distribute_job` | Job Distribution Agent | Publish job postings across hiring channels automatically. |
+| `match_end_to_end` | End-to-End Matching Agent | Run complete candidate and job matching workflows. |
+| `map_job_to_skills` | Job-to-Skill Mapping Agent | Map job descriptions to required and preferred skill taxonomies. |
+| `validate_skills` | Skill Validation Agent | Validate and normalize ATS skill data against RChilli Taxonomy 3.x. |
+| `prescreen_candidate` | Candidate Prescreening | Prescreen a candidate against role-specific criteria. |
+| `generate_jd` | Job Description Builder | Create job descriptions from role inputs. |
+| `generate_interview_questions` | Interview Question Generation | Generate interview questions from job and candidate data. |
+| `analyze_skill_gap` | Skill Gap Analysis | Identify gaps between a profile and a target role. |
+| `recommend_learning_path` | Learning Path Recommendations | Recommend learning paths based on skill gaps. |
+| `detect_bias` | Bias Detection Agent | Detect biased hiring language in Job Descriptions and screening criteria. |
+| `augment_profile` | Profile Augmentation Agent | Enrich candidate profiles from available data sources. |
+| `agent_matching` | Matching Agent | Matches a candidate against a job description and returns an explainable fit score, matched skills, gaps, and recommendations. |
+| `normalize_candidate_data` | Candidate Data Normalization Agent | Standardize candidate data across multiple ATS systems. |
+| `screen_application_batch` | Prescreening Agent | Screen a batch of candidates and recommend next actions. |
+| `detect_resume_anomalies` | Integrity Detection Agent | Flag suspicious claims or inconsistencies in candidate profiles. |
+| `prescreen_ai_agent` | Pre-Screening AI Agents | Automate first-round candidate screening with AI-led audio interviews and Oracle/ATS record write-back. |
+| `normalize_hr_data_with_lov` | Normalize HR Data with LOV | Map raw HR data values to standardized List of Values entries. |
+| `map_candidate_skills` | Skill Mapping Agent | Extract, cluster, normalize, and infer a candidate’s skill profile from resume text. |
+| `query_skill_graph` | Skill Adjacency Graph Agent | Find related skills, identify skill gaps, assess near-fit candidates, and recommend learning paths. | 
 
 ## 📦 Response Format
 
@@ -277,13 +302,6 @@ retryable flag. Retryable is true for rate-limit and transient errors.
 **Does it support batch processing?**
 Yes. `extract_resume_data` supports batch mode to process legacy databases
 or migration backlogs overnight at scale.
-
----
-
-## 🚀 Coming Soon
-
-AI Agent tools — **Interview Question Generator**, **JD Generator**,
-**Skill-Gap Analysis**, **Bias Detection**, and **Learning Path**.
 
 ---
 
