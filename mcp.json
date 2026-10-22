@@ -11,7 +11,7 @@
     "pkce": true,
     "discovery": "https://mcp.rchilli.ai/.well-known/oauth-authorization-server"
   },
-  "tools_count": 17,
+  "tools_count": 32,
   "categories": ["HR Technology", "AI & Machine Learning", "Productivity"],
   "tools": [
     {
@@ -81,8 +81,69 @@
     {
       "name": "search_indexed_documents",
       "description": "Keyword search across indexed resumes or JDs"
+    },
+    {
+      "name": "index_document",
+      "description": "Index any resume or job description into RChilli's Search & Match engine so it can be searched, matched, updated, and reused across downstream recruitment workflows."
+    },
+    {
+      "name": "analyze_hr_call",
+      "description": "Analyze recruiting calls for insights, sentiment, and action items."
+    },
+    {
+      "name": "match_end_to_end",
+      "description": "Run complete candidate and job matching workflows."
+    },
+    {
+      "name": "map_job_to_skills",
+      "description": "Map job descriptions to required and preferred skill taxonomies."
+    },
+    {
+      "name": "generate_jd",
+      "description": "Create job descriptions from role inputs."
+    },
+    {
+      "name": "generate_interview_questions",
+      "description": "Generate interview questions from job and candidate data."
+    },
+    {
+      "name": "analyze_skill_gap",
+      "description": "Identify gaps between a profile and a target role."
+    },
+    {
+      "name": "recommend_learning_path",
+      "description": "Recommend learning paths based on skill gaps."
+    },
+    {
+      "name": "detect_bias",
+      "description": "Detect biased hiring language in Job Descriptions and screening criteria."
+    },
+    {
+      "name": "normalize_candidate_data",
+      "description": "Standardize candidate data across multiple ATS systems."
+    },
+    {
+      "name": "screen_application_batch",
+      "description": "Screen a batch of candidates and recommend next actions."
+    },
+    {
+      "name": "detect_resume_suspicion",
+      "description": "Flag suspicious claims or inconsistencies in candidate profiles."
+    },
+    {
+      "name": "normalize_hr_data_with_lov",
+      "description": "Map raw HR data values — degrees, universities, certifications, job profiles, skills, and locations — to standardized List of Values (LoV) entries based on your configured LoV categories."
+    },
+    {
+      "name": "skill_mapping",
+      "description": "Extract, cluster, normalize, and infer a candidate's full skill profile from resume text — returning a structured, taxonomy-mapped skill set with explanatory notes in a recruiter-ready HTML output."
+    },
+    {
+      "name": "analyze_skill_adjacency",
+      "description": "Query RChilli's skill adjacency graph to find related skills, identify candidate skill gaps, check near-fit candidates against a role, and recommend learning paths — all from a single talent intelligence engine."
     }
-  ],
+  ]
+}
   "links": {
     "homepage": "https://mcp.rchilli.ai",
     "documentation": "https://docs.rchilli.com/kc/index.html",
