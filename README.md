@@ -13,7 +13,7 @@
 
   <p>
     MCP Spec: 2025-11-26 &nbsp;|&nbsp;
-    37 Tools &nbsp;|&nbsp;
+    32 Tools &nbsp;|&nbsp;
     OAuth 2.1 &nbsp;|&nbsp;
     Streamable HTTP
   </p>
@@ -29,7 +29,7 @@
 ## What is RChilli MCP Hub?
 
 RChilli MCP Hub is a production-grade MCP server that exposes RChilli's full
-HR data intelligence platform as **37 AI-callable tools** across 4 categories.
+HR data intelligence platform as **32 AI-callable tools** across 4 categories.
 
 Built on **15+ years of HR data intelligence**, it is trusted by ATS vendors,
 HR technology platforms, staffing agencies, and enterprise recruiting teams
@@ -40,7 +40,7 @@ exceptions, no inconsistent formats.
 
 ## ✨ Key Features
 
-1. **Zero boilerplate** — One endpoint, one OAuth login, 37 tools ready to use
+1. **Zero boilerplate** — One endpoint, one OAuth login, 32 tools ready to use
 2. **OAuth 2.1 + PKCE** — No API keys to copy or paste; fully automatic auth flow
 3. **200+ resume fields** — Name, contact, skills, experience, education, certifications, and taxonomy-enriched job profiles
 4. **ONet / ESCO taxonomy** — 10,000+ curated skills and job profiles with canonical mappings
@@ -157,7 +157,7 @@ Or browse the listing at:
 
 ---
 
-## 🛠️ Tools — 37 Total
+## 🛠️ Tools — 32 Total
 
 `userkey` and `subuserid` are injected automatically from your Bearer token — you never need to pass them manually.
 
@@ -198,40 +198,35 @@ Or browse the listing at:
 
 ---
 
-### 🔎 Search & Matching (3 tools)
+### 🔎 Search & Matching (4 tools)
 
 | Tool | What It Does |
 |------|-------------|
 | `score_resume_against_jd` | Accepts one resume and one Job Description (no index required) and returns an overall match score, dimension scores, skill gap list, and natural-language explanation. Bias-controlled and audit-ready. |
 | `find_matches_in_index` | Accepts a resume or Job Description as input and returns the top-N most similar documents from the indexed corpus ranked by semantic similarity. No index setup required for the input document. |
 | `search_indexed_documents` | Accepts a query string and returns ranked document references from the tenant's pre-populated index. Supports Boolean and semantic search modes. Requires documents to be indexed before use. |
+| `index_document` | Index any resume or job description into RChilli's Search & Match engine so it can be searched, matched, updated, and reused across downstream recruitment workflows. |
 
 ---
 
-### 🤖 AI Agents (20 tools)
+### 🤖 AI Agents (14 tools)
 
 | Tool | Agent | What It Does |
 |------|-------|--------------|
 | `analyze_hr_call` | HR Call Analyzer Agent | Analyze recruiting calls for insights, sentiment, and action items. |
-| `distribute_job` | Job Distribution Agent | Publish job postings across hiring channels automatically. |
 | `match_end_to_end` | End-to-End Matching Agent | Run complete candidate and job matching workflows. |
 | `map_job_to_skills` | Job-to-Skill Mapping Agent | Map job descriptions to required and preferred skill taxonomies. |
-| `validate_skills` | Skill Validation Agent | Validate and normalize ATS skill data against RChilli Taxonomy 3.x. |
-| `prescreen_candidate` | Candidate Prescreening | Prescreen a candidate against role-specific criteria. |
 | `generate_jd` | Job Description Builder | Create job descriptions from role inputs. |
 | `generate_interview_questions` | Interview Question Generation | Generate interview questions from job and candidate data. |
 | `analyze_skill_gap` | Skill Gap Analysis | Identify gaps between a profile and a target role. |
 | `recommend_learning_path` | Learning Path Recommendations | Recommend learning paths based on skill gaps. |
 | `detect_bias` | Bias Detection Agent | Detect biased hiring language in Job Descriptions and screening criteria. |
-| `augment_profile` | Profile Augmentation Agent | Enrich candidate profiles from available data sources. |
-| `agent_matching` | Matching Agent | Matches a candidate against a job description and returns an explainable fit score, matched skills, gaps, and recommendations. |
 | `normalize_candidate_data` | Candidate Data Normalization Agent | Standardize candidate data across multiple ATS systems. |
 | `screen_application_batch` | Prescreening Agent | Screen a batch of candidates and recommend next actions. |
-| `detect_resume_anomalies` | Integrity Detection Agent | Flag suspicious claims or inconsistencies in candidate profiles. |
-| `prescreen_ai_agent` | Pre-Screening AI Agents | Automate first-round candidate screening with AI-led audio interviews and Oracle/ATS record write-back. |
-| `normalize_hr_data_with_lov` | Normalize HR Data with LOV | Map raw HR data values to standardized List of Values entries. |
-| `map_candidate_skills` | Skill Mapping Agent | Extract, cluster, normalize, and infer a candidate’s skill profile from resume text. |
-| `query_skill_graph` | Skill Adjacency Graph Agent | Find related skills, identify skill gaps, assess near-fit candidates, and recommend learning paths. | 
+| `detect_resume_suspicion` | Integrity Detection Agent | Flag suspicious claims or inconsistencies in candidate profiles. |
+| `normalize_hr_data_with_lov` | Normalize HR Data with LOV | Map raw HR data values — degrees, universities, certifications, job profiles, skills, and locations — to standardized List of Values (LoV) entries based on your configured LoV categories. |
+| `skill_mapping` | Skill Mapping Agent | Extract, cluster, normalize, and infer a candidate's full skill profile from resume text — returning a structured, taxonomy-mapped skill set with explanatory notes in a recruiter-ready HTML output. |
+| `analyze_skill_adjacency` | Skill Adjacency Graph Agent | Query RChilli's skill adjacency graph to find related skills, identify candidate skill gaps, check near-fit candidates against a role, and recommend learning paths — all from a single talent intelligence engine. |
 
 ## 📦 Response Format
 
