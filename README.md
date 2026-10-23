@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/RchilliDevTeam/rchilli-mcp-hub/main/rchilli-logo.png" alt="RChilli Logo" width="280" />
+  <img src=RChilli_Logo_JPG.jpg alt="RChilli Logo" width="280" />
 
   <h1>RChilli MCP Hub</h1>
 
