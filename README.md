@@ -28,8 +28,7 @@
 
 ## What is RChilli MCP Hub?
 
-RChilli MCP Hub is a production-grade MCP server that exposes RChilli's full
-HR data intelligence platform as **32 AI-callable tools** across 4 categories.
+RChilli MCP Hub is a production-grade MCP server that exposes RChilli's full HR data intelligence platform as 32 AI-callable tools across 5 categories.
 
 Built on **15+ years of HR data intelligence**, it is trusted by ATS vendors,
 HR technology platforms, staffing agencies, and enterprise recruiting teams
