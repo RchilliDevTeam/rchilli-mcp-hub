@@ -1,6 +1,6 @@
 {
   "name": "rchilli-mcp-hub",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "RChilli HR Intelligence MCP — parse resumes and job descriptions, match candidates, enrich skills with ONet/ESCO taxonomy, redact bias fields, and convert documents through any MCP-enabled AI assistant.",
   "endpoint": "https://mcp.rchilli.ai/mcp",
   "transport": "streamable-http",
