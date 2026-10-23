@@ -27,7 +27,7 @@ All notable changes to RChilli MCP Hub are documented here.
 ## v1.1.0 — October 2026
 
 ### Added
-- Expanded RChilli MCP Hub from 17 to **31 production-ready MCP tools** across 5 categories.
+- Expanded RChilli MCP Hub from 17 to **32 production-ready MCP tools** across 5 categories.
 - Added 14 AI Agent tools:
   - `analyze_hr_call` — HR Call Analyzer Agent
   - `match_end_to_end` — End-to-End Matching Agent
