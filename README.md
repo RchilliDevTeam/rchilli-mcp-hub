@@ -311,6 +311,7 @@ RChilli MCP Hub requires a valid RChilli account with an active plan.
 | Help Desk | https://help.rchilli.com/hc/en-us |
 | Smithery Listing | https://smithery.ai/servers/dev-ko1g/rchilli |
 | Support | support@rchilli.com |
+|Security | it@rchilli.com |
 
 ---
 
