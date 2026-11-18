@@ -1,0 +1,23 @@
+{
+  "id": "rchilli-mcp-hub",
+  "name": "RChilli MCP Hub",
+  "description": "Connect RChilli HR intelligence tools to OpenClaw through OAuth-enabled remote MCP.",
+  "version": "1.0.0",
+  "categories": ["documents-files"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "mcpServers": {
+    "rchilli": {
+      "url": "https://mcp.rchilli.ai/mcp",
+      "transport": "streamable-http",
+      "auth": "oauth",
+      "enabled": true,
+      "connectionTimeoutMs": 30000,
+      "requestTimeoutMs": 60000
+    }
+  }
+  
+}
