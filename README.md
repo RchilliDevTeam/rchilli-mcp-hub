@@ -1,5 +1,6 @@
+
 <div align="center">
-  <img src=RChilli_Logo_JPG.jpg alt="RChilli Logo" width="280" />
+  <img src="RChilli_Logo_JPG.jpg" alt="RChilli Logo" width="280" />
 
   <h1>RChilli MCP Hub</h1>
 
@@ -13,7 +14,6 @@
 
   <p>
     MCP Spec: 2025-11-26 &nbsp;|&nbsp;
-    32 Tools &nbsp;|&nbsp;
     OAuth 2.1 &nbsp;|&nbsp;
     Streamable HTTP
   </p>
@@ -28,7 +28,7 @@
 
 ## What is RChilli MCP Hub?
 
-RChilli MCP Hub is a production-grade MCP server that exposes RChilli's full HR data intelligence platform as 32 AI-callable tools across 5 categories.
+RChilli MCP Hub is a production-grade MCP server that exposes RChilli's full HR data intelligence platform through AI-callable tools across multiple categories.
 
 Built on **15+ years of HR data intelligence**, it is trusted by ATS vendors,
 HR technology platforms, staffing agencies, and enterprise recruiting teams
@@ -39,7 +39,7 @@ exceptions, no inconsistent formats.
 
 ## ✨ Key Features
 
-1. **Zero boilerplate** — One endpoint, one OAuth login, 32 tools ready to use
+1. **Zero boilerplate** — One endpoint, one OAuth login, seamless access to RChilli MCP tools
 2. **OAuth 2.1 + PKCE** — No API keys to copy or paste; fully automatic auth flow
 3. **200+ resume fields** — Name, contact, skills, experience, education, certifications, and taxonomy-enriched job profiles
 4. **ONet / ESCO taxonomy** — 10,000+ curated skills and job profiles with canonical mappings
@@ -72,7 +72,7 @@ integrations.
 
 ### Interactive flow (Claude, Cursor, Cline)
 
-```
+```text
 Your AI Client               MCP Server               RChilli Auth
 ─────────────────────   ───────────────────────   ──────────────────────
 1. Discover config   →  /.well-known/
@@ -82,8 +82,8 @@ Your AI Client               MCP Server               RChilli Auth
 2. Open login        →  GET /authorize
                          ← RChilli login page
 
-3. User logs in      →  POST /authorize         →  validates credentials
-                         ← 302 redirect + code      ← auth code
+3. User logs in      →  POST /authorize         → validates credentials
+                         ← 302 redirect + code   ← auth code
 
 4. Exchange code     →  POST /token
    + PKCE verifier       ← Bearer token
@@ -94,6 +94,7 @@ Your AI Client               MCP Server               RChilli Auth
 ```
 
 **What this means for you:**
+
 - The full OAuth flow opens automatically in a popup
 - Access tokens refresh every **1 hour** silently
 - Sessions stay active for **30 days** via refresh token
@@ -152,17 +153,18 @@ smithery mcp add dev-ko1g/rchilli
 ```
 
 Or browse the listing at:
+
 [https://smithery.ai/servers/dev-ko1g/rchilli](https://smithery.ai/servers/dev-ko1g/rchilli)
 
 ---
 
-## 🛠️ Tools — 32 Total
+## 🛠️ Available Tools
 
 `userkey` and `subuserid` are injected automatically from your Bearer token — you never need to pass them manually.
 
 ---
 
-### 📄 Resume & Job Description Parsing (3 tools)
+### 📄 Resume & Job Description Parsing
 
 | Tool | What It Does |
 |------|-------------|
@@ -172,18 +174,18 @@ Or browse the listing at:
 
 ---
 
-### 🔍 Skills & Job Taxonomy (4 tools)
+### 🔍 Skills & Job Taxonomy
 
 | Tool | What It Does |
 |------|-------------|
-| `lookup_skill` | Returns authoritative detail for a known skill including description, all aliases, related skills, proficiency levels, and O\*NET/ESCO mappings. Use when you need the complete record rather than a ranked search. |
-| `lookup_job_profile` | Returns authoritative detail for a known job profile including canonical title, SOC/O\*NET code, job family, typical required and preferred skills, salary bands, and work context. |
+| `lookup_skill` | Returns authoritative detail for a known skill including description, all aliases, related skills, proficiency levels, and O*NET/ESCO mappings. Use when you need the complete record rather than a ranked search. |
+| `lookup_job_profile` | Returns authoritative detail for a known job profile including canonical title, SOC/O*NET code, job family, typical required and preferred skills, salary bands, and work context. |
 | `autocomplete_skill` | Accepts a partial skill string (min 2 chars) and returns up to 10 ranked autocomplete suggestions with canonical names and categories. Prevents free-text entry errors and keeps skill data clean at point of entry. |
 | `autocomplete_job_profile` | Accepts a partial job title string and returns ranked autocomplete suggestions with canonical titles and job families. Ensures job titles map to taxonomy profiles from the moment a recruiter starts typing. |
 
 ---
 
-### 🧹 Redaction, Documents & Utilities (7 tools)
+### 🧹 Redaction, Documents & Utilities
 
 | Tool | What It Does |
 |------|-------------|
@@ -193,11 +195,11 @@ Or browse the listing at:
 | `tag_entities` | Takes already-extracted HR text and annotates it by wrapping each recognized entity in a structured XML-style label inline — covering 10+ HR-specific entity types including job title, skill, city, degree, organization, person name, state, country, date, and year. |
 | `extract_contacts` | Identifies and structures names, emails, phone numbers, LinkedIn URLs, and addresses with field-level confidence scores from candidate records, emails, or documents. Safe for GDPR/CCPA workflows. |
 | `geolocate` | Converts partial or informal location text into structured city, state, country, ISO codes, latitude, and longitude. Enables radius-based candidate and job search and supports workforce planning analytics. |
-| `classify_job_zone` | Reads the job profile from a resume or job description and returns its O\*NET Job Zone (1–5) based on education, experience, and training criteria. Enables candidate-to-role fit filtering, compensation benchmarking, and over/under-qualification flagging. |
+| `classify_job_zone` | Reads the job profile from a resume or job description and returns its O*NET Job Zone (1–5) based on education, experience, and training criteria. Enables candidate-to-role fit filtering, compensation benchmarking, and over/under-qualification flagging. |
 
 ---
 
-### 🔎 Search & Matching (4 tools)
+### 🔎 Search & Matching
 
 | Tool | What It Does |
 |------|-------------|
@@ -208,7 +210,7 @@ Or browse the listing at:
 
 ---
 
-### 🤖 AI Agents (14 tools)
+### 🤖 AI Agents
 
 | Tool | Agent | What It Does |
 |------|-------|--------------|
@@ -227,6 +229,8 @@ Or browse the listing at:
 | `skill_mapping` | Skill Mapping Agent | Extract, cluster, normalize, and infer a candidate's full skill profile from resume text — returning a structured, taxonomy-mapped skill set with explanatory notes in a recruiter-ready HTML output. |
 | `analyze_skill_adjacency` | Skill Adjacency Graph Agent | Query RChilli's skill adjacency graph to find related skills, identify candidate skill gaps, check near-fit candidates against a role, and recommend learning paths — all from a single talent intelligence engine. |
 
+---
+
 ## 📦 Response Format
 
 Every tool returns the same consistent envelope:
@@ -234,7 +238,7 @@ Every tool returns the same consistent envelope:
 ```json
 {
   "success": true,
-  "data": { },
+  "data": {},
   "meta": {
     "trace_id": "3e4f1a2b-uuid",
     "latency_ms": 312.45
@@ -267,33 +271,41 @@ agent can automatically retry without human intervention.
 ## Frequently Asked Questions
 
 **What AI clients work with RChilli MCP Hub?**
+
 Any MCP-enabled client — Claude Desktop, Claude.ai, Cursor, Cline,
 Windsurf, Zed, and VS Code. Any client supporting Streamable HTTP works.
 
 **Do I need an API key?**
+
 No API key required. RChilli MCP Hub uses OAuth 2.1. Enter your RChilli
 Client ID and Secret once — the full login flow opens automatically.
 
 **How do I get RChilli credentials?**
+
 Sign up or log in at https://myaccount.rchilli.com/account/login and
 get your Client ID and Secret from the dashboard.
 
 **What file formats are supported for resume parsing?**
+
 PDF, DOCX, DOC, RTF, HTML, and 15+ additional formats across 40+ languages.
 
 **Is my resume data stored by the MCP server?**
+
 No. The MCP layer does not store any resume or candidate data. All data
 in transit is encrypted via TLS 1.3.
 
 **Can I use this for server-to-server integrations?**
+
 Yes. OAuth 2.0 client_credentials grant is supported for automated
 pipelines — no browser login needed.
 
 **What happens if a tool call fails?**
+
 All errors return a structured JSON envelope with a code, message, and
 retryable flag. Retryable is true for rate-limit and transient errors.
 
 **Does it support batch processing?**
+
 Yes. `extract_resume_data` supports batch mode to process legacy databases
 or migration backlogs overnight at scale.
 
@@ -311,7 +323,7 @@ RChilli MCP Hub requires a valid RChilli account with an active plan.
 | Help Desk | https://help.rchilli.com/hc/en-us |
 | Smithery Listing | https://smithery.ai/servers/dev-ko1g/rchilli |
 | Support | support@rchilli.com |
-|Security | it@rchilli.com |
+| Security | it@rchilli.com |
 
 ---
 
@@ -326,3 +338,4 @@ RChilli MCP Hub requires a valid RChilli account with an active plan.
     <a href="https://smithery.ai/servers/dev-ko1g/rchilli">Smithery</a>
   </sub>
 </div>
+
