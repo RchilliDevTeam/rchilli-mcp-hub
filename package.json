@@ -1,0 +1,57 @@
+﻿{
+    "name":  "@rchillidevteam/openclaw-rchilli-mcp",
+    "version":  "1.0.1",
+    "private":  false,
+    "type":  "module",
+    "description":  "RChilli MCP Hub connector for OpenClaw: resume and job parsing, matching, skills taxonomy, and redaction.",
+    "author":  {
+                   "name":  "RChilli Inc.",
+                   "email":  "support@rchilli.com",
+                   "url":  "https://www.rchilli.com"
+               },
+    "homepage":  "https://github.com/RchilliDevTeam/rchilli-mcp-hub#readme",
+    "keywords":  [
+                     "openclaw",
+                     "mcp",
+                     "rchilli",
+                     "resume-parser",
+                     "job-parsing",
+                     "candidate-matching",
+                     "hr-tech"
+                 ],
+    "files":  [
+                  "index.js",
+                  "openclaw.plugin.json",
+                  "README.md",
+                  "CHANGELOG.md",
+                  "LICENSE",
+                  "docs/"
+              ],
+    "engines":  {
+                    "node":  "\u003e=24.16.0 \u003c25 || \u003e=26.1.0"
+                },
+    "openclaw":  {
+                     "extensions":  [
+                                        "./index.js"
+                                    ],
+                     "compat":  {
+                                    "pluginApi":  "\u003e=2026.11.4",
+                                    "minGatewayVersion":  "2026.11.4"
+                                },
+                     "build":  {
+                                   "openclawVersion":  "2026.11.4"
+                               },
+                     "install":  {
+                                     "minHostVersion":  "\u003e=2026.11.4"
+                                 }
+                 },
+    "license":  "SEE LICENSE IN LICENSE",
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/RchilliDevTeam/rchilli-mcp-hub.git"
+                   },
+    "bugs":  {
+                 "url":  "https://github.com/RchilliDevTeam/rchilli-mcp-hub/issues",
+                 "email":  "support@rchilli.com"
+             }
+}
